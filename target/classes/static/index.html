@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+    <html ng-app="scotchApp">
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="script.js"></script>
+      <style>
+      body {
+      background-color: #fff7e6;    /* #66d9ff; */
+      }
+      
+      .nav-bg {
+      	background-color: #e6f0ff;
+      	height: 3%;
+      	position: fixed; 
+      	top: 0;
+      	width : 100%;
+      }
+      
+      .sticky{
+
+      }
+      
+      .tail {
+      	background-color: white;
+      	height: 50%;
+      
+      }
+      
+      </style>
+    </head>
+    <body ng-controller="mainController">
+
+        <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav class="navbar navbar-default nav-bg sticky">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angelo's Chippy</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#menu"><i class="fa fa-cutlery"></i> Menu</a></li>
+                    <li><a href="#deal"><i class="fa fa-exclamation"></i> Offers</a></li>
+                    <li><a href="#about"><i class="fa fa-smile-o"></i> About Us</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+			<div ng-view></div>
+        </div>
+
+    <!-- footer>
+      <md-toolbar class="md-scroll-shrink tail">
+        <div layout="row" layout-align="center center" flex>
+          FOOTER INFO
+        </div>
+      </md-toolbar>
+    </footer-->
+    </body>
+    </html>
